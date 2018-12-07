@@ -1,0 +1,765 @@
+@font-face {
+    font-family: "HarmoniaSansProCyr";
+    src: url("/../data/fonts/HarmoniaSansProCyr.otf") format("opentype");
+}
+
+$cwidth: 1540px;
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.conteiner {
+    padding: 0;
+    width: $cwidth;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 1);
+}
+
+.soclink {
+    margin-top: 25px;
+    margin-right: 185px;
+    float: right;
+    transition: 0.2s;
+    padding-bottom: 23px;
+    a {
+        transition: 0.2s;
+        text-align: center;
+        line-height: 1.4;
+        margin-bottom: 0px;
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        display: inline-block;
+        &:hover {
+            background-color: #34404b;
+        }
+        &:hover i {
+            color: #ffffff;
+        }
+        i {
+            font-size: 20px;
+            color: #34404b;
+        }
+    }
+}
+
+.contacts {
+    margin-top: 25px;
+    margin-left: 165px;
+    float: left;
+    a {
+        transition: 0.2s;
+        padding-left: 19px;
+        width: 230px;
+        height: 16px;
+        font-family: HarmoniaSansProCyr;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: right;
+        color: #34404b;
+        text-decoration: none;
+        &:hover {
+            color: #ff5912;
+        }
+        &:hover i {
+            color: #34404b;
+        }
+        i {
+            width: 18px;
+            height: 11px;
+            color: #ff5912;
+        }
+    }
+}
+header{
+    // set animation
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.pre_head {
+    width: 1540px;
+    height: 60px;
+    background-color: #ffffff;
+}
+
+header {
+    width: $cwidth;
+    height: 200px;
+    background-color: #ffffff;           
+}
+header.sticky {
+    position: fixed;
+    z-index: 1;
+    height: 200px;
+}
+
+.navi {
+    width: 1540px;
+    padding-top: 54px;
+    .logo {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        display: inline-block;
+        margin-left: 184px;
+        text-decoration: none;
+    }
+}
+
+.logo_text {
+    position: absolute;
+    left: 174px;
+    top: 135px;
+    width: 130px;
+    height: 11px;
+    opacity: 0.8;
+    font-family: HarmoniaSansProCyr;
+    font-size: 8px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.76;
+    letter-spacing: 4px;
+    text-align: right;
+    color: rgba(70, 80, 90, 0.8);
+}
+
+.menu {
+    width: 447px;
+    margin-left: 83px;
+    float: left;
+    list-style-type: none;
+    display: flex;
+    padding-top: 8px;
+    a {
+        text-decoration: none;
+        height: 12px;
+        font-family: HarmoniaSansProCyr;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        transition: 0.3s;
+        letter-spacing: normal;
+        color: #34404b;
+        &:hover {
+            color: #ff5912;
+        }
+    }
+}
+
+.no_main {
+    float: right;
+    list-style-type: none;
+    display: flex;
+    margin-right: 156px;
+    li {
+        padding-right: 30px;
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            &:hover {
+                color: #ff5912;
+            }
+            &:hover i {
+                color: #ff5912;
+            }
+            i {
+                transition: 0.2s;
+            }
+        }
+    }
+}
+
+.filter {
+    height: 143px;
+    background-color: #f5f6f7;
+}
+
+main {
+    width: 1540px;
+    height: 2865px;
+    background-color: #f4f6f8;
+}
+
+.main_gal {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-bottom: 131px;
+    li {
+        position: relative;
+        margin-top: 150px;
+        width: 270px;
+        height: 375px;
+        background-color: #ffffff;
+    }
+}
+
+.bottom {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    transform: translate(-90%, -40%);
+    a {
+        text-decoration: none;
+        width: 200px;
+        height: 13px;
+        font-family: 'Quicksand';
+        font-size: 18px;
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #34404b;
+        transition: 0.2s;
+        &:hover {
+            color: #ff5912;
+        }
+    }
+    span {
+        margin-top: 33px;
+        font-family: 'Quicksand';
+        font-size: 20px;
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ff5912;
+    }
+}
+
+.item_link {
+    width: 270px;
+    height: 375px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s;
+    &:hover {
+        background-color: #ffffff;
+        box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.5);
+    }
+    img {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.my_rev {
+    border-radius: 2px;
+    border: solid 2px #aa9b77;
+    border-top: none;
+}
+
+.item_page {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    width: 1540px;
+    height: 650px;
+    background-color: #ffffff;
+    .img_block {
+        height: 650px;
+        width: 665px;
+    }
+    .info_block {
+        height: 650px;
+        width: 873px;
+    }
+}
+
+.product_title {
+    padding-top: 103px;
+    margin-left: 0px;
+    width: 701px;
+    min-height: 37px;
+    font-family: HarmoniaSansProCyr;
+    font-size: 52px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ff5912;
+}
+
+.description {
+    display: inline-block;
+    padding-top: 40px;
+    margin-left: 0px;
+    width: 718px;
+    min-height: 76px;
+    font-family: HarmoniaSansProCyr;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.88;
+    letter-spacing: normal;
+    color: #495662;
+}
+
+.seprate {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 712px;
+    height: 1px;
+    background-color: #edeff1;
+    margin-left: 0px;
+}
+
+.order {
+    height: 300px;
+}
+
+.add_to {
+    cursor: pointer;
+    border-style: none;
+    outline: 0 !important;
+    margin-right: 260px;
+    float: right;
+    display: inline-block;
+    width: 134px;
+    height: 49px;
+    border-radius: 24.5px;
+    background-color: #ff5912;
+    font-family: HarmoniaSansProCyr;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.5;
+    letter-spacing: normal;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.25s;
+    &:hover {
+        background-color: #ff9060;
+    }
+    &:active {
+        position: relative;
+        top: 1px;
+        right: 1px;
+    }
+}
+
+
+.price_item {
+    outline: 0 !important;
+    border: 0px;
+    height: 17px;
+    font-family: HarmoniaSansProCyr;
+    font-size: 20px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #34404b;
+    box-sizing: border-box;
+    width: 100px;
+}
+
+.img_block {
+    .img_item_page {
+        display: inline-block;
+        margin-top: 103px;
+        margin-left: 346px;
+    }
+}
+
+.line {
+    width: 1535px;
+    height: 1px;
+    opacity: 0.5;
+    background-color: #e6e8eb;
+}
+
+.price {
+    position: absolute;
+    top: 130px;
+    right: 190px;
+    font-size: 30px;
+    color: black;
+}
+
+.buy_button {
+    outline: none;
+    position: absolute;
+    top: 80px;
+    right: 100px;
+    display: block;
+    width: 130px;
+    height: 45px;
+    background-color: #ff5912;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 2.3;
+    text-align: center;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover {
+        background-color: #ff9060;
+    }
+    &:focus {
+        outline: none !important
+    }
+}
+
+
+.delete_button {
+    top: 80px;
+    right: 100px;
+    display: block;
+    width: 130px;
+    height: 45px;
+    background-color: #ff5912;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 2.3;
+    text-align: center;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover {
+        background-color: #ff9060;
+    }
+    &:focus {
+        outline: none !important
+    }
+}
+
+.signin {
+    color: green;
+    i {
+        color: green;
+    }
+}
+
+.signout {
+    color: red;
+    i {
+        color: red;
+    }
+}
+
+.cart_zero {
+    color: red;
+    i {
+        color: red;
+    }
+}
+
+.cart_nozero {
+    color: goldenrod;
+    i {
+        color: goldenrod;
+    }
+}
+
+#load {
+    width: 1170px;
+    height: 250px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    div {
+        font-family: HarmoniaSansProCyr;
+        margin: 5px;
+        cursor: pointer;
+        height: 45px;
+        background-color: #ffffff;
+        color: #ff5912;
+        padding-top: 15px;
+        font-size: 18px;
+        &:hover {
+            background-color: #f7f5f6;
+            border: solid 1px #ff5912;
+        }
+    }
+}
+
+#imgLoad {
+    width: 200px;
+}
+
+.form-4 {
+    /* Size and position */
+    width: 300px;
+    margin:0 auto 30px;
+    padding: 10px;
+    position: relative;
+
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+    color: white;
+    text-shadow: 0 2px 1px rgba(0,0,0,0.3);
+}
+
+.form-4 h1 {
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+.form-4 input[type=text],
+.form-4 input[type=email],
+.form-4 input[type=password] {
+    /* Size and position */
+    width: 280px;
+    padding: 8px 4px 8px 10px;
+    margin-bottom: 15px;
+
+    /* Styles */
+    border: 1px solid #ff9060; /* Fallback */
+    border: 1px solid #ff9060;
+    background: rgba(0,0,0,0.15);
+    border-radius: 2px;
+    box-shadow:
+        0 1px 0 rgba(255,255,255,0.2),
+        inset 0 1px 1px rgba(0,0,0,0.1);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+    /* Font styles */
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+    font-size: 13px;
+}
+.form-4 input::-webkit-input-placeholder {
+    color: #ff9060;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.form-4 input:-moz-placeholder {
+    color: #ff9060;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.form-4 input:-ms-input-placeholder {
+    color: rgba(37,21,26,0.5);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+}
+.form-4 input[type=text]:hover,
+.form-4 input[type=email]:hover,
+.form-4 input[type=password]:hover {
+    border-color: #333;
+}
+
+.form-4 input[type=text]:focus,
+.form-4 input[type=password]:focus,
+.form-4 input[type=email]:focus,
+.form-4 input[type=button]:focus,
+.form-4 input[type=submit]:focus {
+    box-shadow:
+        0 1px 0 rgba(255,255,255,0.2),
+        inset 0 1px 1px rgba(0,0,0,0.1),
+        0 0 0 3px rgba(255,255,255,0.15);
+    outline: none;
+}
+
+/* Fallback */
+.no-boxshadow .form-4 input[type=text]:focus,
+.no-boxshadow .form-4 input[type=email]:focus,
+.no-boxshadow .form-4 input[type=password]:focus {
+    outline: 1px solid white;
+}
+
+.form-4 input[type=button],
+.form-4 input[type=submit]{
+    /* Size and position */
+    width:300px;
+    padding: 8px 5px;
+
+    /* Styles */
+    background: linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7));   
+    border-radius: 5px;
+    border: 1px solid #ff9060;
+    box-shadow:
+        inset 0 1px rgba(255,255,255,0.4),
+        0 2px 1px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    /* Font styles */
+    color: white;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+}
+
+.form-4 input[type=button]:hover,
+.form-4 input[type=submit]:hover{
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,0.2),
+        inset 0 20px 30px rgba(99,64,86,0.5);
+}
+
+/* Fallback */
+.no-boxshadow .form-4 input[type=button]:hover,
+.no-boxshadow .form-4 input[type=submit]:hover{
+    background: #594642;
+}
+.form-4 label {
+    display: none;
+    padding: 0 0 5px 2px;
+    cursor: pointer;
+}
+
+.form-4 label:hover ~ input {
+    border-color: #333;
+}
+
+.no-placeholder .form-4 label {
+    display: block;
+}
+.grand-total{
+    text-align: center;
+}
+.orderNow {
+    margin-right: 100px;
+    background-color: #f4f6f8;
+    border: none; 
+    outline: none; 
+    position: relative;
+    z-index: 1;
+    color: black;
+    font-size: 135%;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .25em .5em;
+}
+.orderNow:after {
+    content: "Order";  /* здесь 6 букв */
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    width: calc(100% + 6*(1em*90/135) - 2px*2*2);  /* где 6*(1em*90/135), где 6 - это 6 букв, 90 - это font-size after, а 135 - это font-size родителя */
+    text-align: right;
+    line-height: 1.4;
+    color: #fff;
+    font-size: 90%;
+    padding: .25em .5em;
+    border: 2px solid #ff7b0d;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #ffa84c 0%,#ff7b0d 100%);
+    background-size: calc(6*(1em*90/135) + .5em) 100%;
+    box-shadow: inset calc(-6*(1em*90/135) - .5em) 0 rgba(255,255,255,0);
+    transition: .3s;
+}
+.orderNow:hover:after {
+    box-shadow: inset calc(-6*(1em*90/135) - .5em) 0 rgba(255,255,255,.2);
+}
+.orderNow:active:after {
+    background-image: linear-gradient(#ff7b0d, #ffa84c);
+}
+
+.order_room {
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #f4f6f8;
+    border: none; 
+    outline: none; 
+    position: relative;
+    z-index: 1;
+    color: black;
+    font-size: 135%;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .25em .5em;
+}
+.order_room:after {
+    content: "Sign in and Order";  /* здесь 6 букв */
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    width: calc(100% + 12*(1em*90/120) - 2px*2*2);  /* где 6*(1em*90/135), где 6 - это 6 букв, 90 - это font-size after, а 135 - это font-size родителя */
+    text-align: right;
+    line-height: 1.4;
+    color: #fff;
+    font-size: 90%;
+    padding: .25em .5em;
+    border: 2px solid #ff7b0d;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #ffa84c 0%,#ff7b0d 100%);
+    background-size: calc(14*(1em*90/135) + .5em) 100%;
+    box-shadow: inset calc(-14*(1em*90/135) - .5em) 0 rgba(255,255,255,0);
+    transition: .3s;
+}
+.order_room:hover:after {
+    box-shadow: inset calc(-14*(1em*90/135) - .5em) 0 rgba(255,255,255,.2);
+}
+.order_room:active:after {
+    background-image: linear-gradient(#ff7b0d, #ffa84c);
+}
+
+table.greyGridTable {
+  border: 2px solid #FFFFFF;
+  min-width: $cwidth;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.greyGridTable td, table.greyGridTable th {
+  border: 1px solid #FFFFFF;
+  padding: 3px 4px;
+}
+table.greyGridTable tbody td {
+  font-size: 13px;
+}
+table.greyGridTable td:nth-child(even) {
+  background: #EBEBEB;
+}
+table.greyGridTable thead {
+  background: #FFFFFF;
+  border-bottom: 4px solid #333333;
+}
+table.greyGridTable thead th {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  border-left: 2px solid #333333;
+}
+table.greyGridTable thead th:first-child {
+  border-left: none;
+}
+
+table.greyGridTable tfoot {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333333;
+  border-top: 4px solid #333333;
+}
+table.greyGridTable tfoot td {
+  font-size: 14px;
+}

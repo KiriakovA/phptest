@@ -1,0 +1,9 @@
+<ul class="main_gal">
+{% for product in data %}
+      	<li class="img_gal"><a class="item_link" href="index.php?c=page&act=productPage&id={{product.item_id}}"><img class="img" src='/../data/mini_item_img/{{product.photo}}'></a><div class ="bottom"><a href="index.php?c=page$act=productPage">{{product.title}}</a><span>{{product.price}}&nbsp₽</span></div></li>
+{% endfor %}
+</ul>
+    <div id="load">
+	<div>More</div>
+	<img src="/../data/img/preloader.gif" id="imgLoad">
+	</div>

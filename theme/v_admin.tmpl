@@ -1,0 +1,54 @@
+<table class="greyGridTable">
+<thead>
+<tr>
+<th>Order №</th>
+<th>Login</th>
+<th>Customer</th>
+<th>Create time</th>
+<th>Summ</th>
+<th>Status</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{% for orders in data %}
+<tr class="body_table">
+<td class ="order_n">{{orders.order}}<a class="order_info" href="#">-Order datails</a></td>
+<td>{{orders.login}}</td>
+<td>{{orders.customer}}</td>
+<td>{{orders.create_time}}</td>
+<td>{{orders.summ}}$</td>
+<td class="staus_text">{{orders.order_status}}</td>
+<td><input class="cancel_button" data-order = "{{orders.order}}" type="button" name="cencel" value="cancel order">
+{% endfor %}
+</tr>
+</tbody>
+</table>
+    <div class="modal-overlay">
+                                                    <div class="modal">
+
+                                                        <a class="close-modal">
+                                                            <svg viewBox="0 0 20 20">
+                                                            <path fill="#000000" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+                                                            </svg>
+                                                        </a><!-- close modal возврат выполнения метода в jquery-->
+
+                                                        <div class="modal-content">
+                                                            <h2 class="order_d"></h2>
+                                                            <ul>
+                                                                
+                                                            </ul>
+                                                            <form>
+                                                                <select id="selected">
+                                                                <option class="selected" disabled selected></option>
+                                                                <option value="1" >Новый</option>
+                                                                  <option value="2">В обработке</option>
+                                                                   <option value="3">Выполнен</option>
+                                                                    <option value="4">Отменен</option>
+                                                                
+                                                                <input type="button" name="select" value="Confirm">
+                                                            </form>
+                                                        </div><!-- content -->
+
+                                                    </div><!-- modal -->
+                                                </div></td>                                           

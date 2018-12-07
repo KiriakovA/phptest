@@ -1,0 +1,20 @@
+<section class="item_page">
+                <hr class="line">
+                    <div class="img_block">
+                        <img src="/../data/mini_item_img/{{data.photo}}" class="img_item_page"/>
+                    </div>
+                    <div class="info_block">
+                            <h1 data-id="{{data.item_id}}" class="product_title">{{data.title}}</h1>
+                        <p class="description">{{data.info}}</p>
+ 					<hr class="seprate">
+ 					  <div class="order">
+ 					      <form action="" method="POST">
+ 					          <span class="price_item" >Price : <input readonly id="pr" class="price_item" type="text" name="price" value="{{data.price}}$" /></span>
+		          
+		                      <button class="add_to" type="submit">Add to Card</button>
+					       </form>
+                  
+ 					  </div>	
+                    </div>
+                  	
+</section>

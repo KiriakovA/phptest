@@ -1,0 +1,44 @@
+<div class="pre_head">
+        <aside class="contacts">
+            <a href="#"><i class="icon-mail"></i>info@shopy.com</a>
+            <a href="#"><i class="icon-phone"></i>996 - 5553 - 453</a>
+        </aside>
+        <aside class="soclink">
+            <a href="#"><i class="icon-facebook"></i></a>
+            <a href="#"><i class="icon-twitter"></i></a>
+            <a href="#"><i class="icon-gplus-1"></i></a>
+            <a href="#"><i class="icon-instagram"></i></a>
+        </aside><hr class="line">
+    </div>
+    <nav class="navi">
+        
+        <ul class="menu">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Hot Deals</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+       <ul class="no_main">
+            <li>
+                <form >
+                    <input type="text" name="findOrder" placeholder="add your Order number">
+                    <a class="info_form" href="#"><i class="icon-search"></i></a></li>
+                </form>
+            <li><a id="auth" class="signin" 
+                {% if session.login=='admin' %}
+                data-admin="true" 
+                {% endif %} 
+                {% if session.login %}
+                data-login="true" 
+                {% endif %} 
+                {% if session.pass %}
+                data-pass="true" 
+                {% endif %}
+                href="index.php?c=page&act=login"><i class="icon-login"></i>Sign In</a></li>
+        <li class="cart_li"><a class ="cart_nozero" href="index.php?c=page&act=cardPage"><i class="icon-shopping-basket"></i>
+         <span class="content_cart">{{session.total}}
+         {{session.totalq}}</span>
+            </a></li>
+        </ul>
+    </nav>

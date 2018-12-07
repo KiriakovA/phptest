@@ -1,0 +1,130 @@
+<div class="colorlib-shop">
+                    <div class="contain">
+                        <div class="row row-pb-md">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="product-name">
+                                    <div class="one-forth text-center">
+                                        <span>Product Details</span>
+                                    </div>
+                                    <div class="one-eight text-center">
+                                        <span>Price</span>
+                                    </div>
+                                    <div class="one-eight text-center">
+                                        <span>Quantity</span>
+                                    </div>
+                                    <div class="one-eight text-center">
+                                        <span>Total</span>
+                                    </div>
+                                    <div class="one-eight text-center">
+                                        <span>Remove</span>
+                                    </div>
+                                </div>
+                                {% if data %}
+                                {% for product in data %}
+                                <div data-cart-id="{{product.id}}" class="product-cart">
+                                    <div class="one-forth">
+                                        <div class="product-img" style="background-image: url(/../data/mini_item_img/{{product.photo}});">
+                                        </div>
+                                        <div class="display-tc">
+                                            <h3><a href="index.php?c=page&act=productPage&id={{product.id}}">{{product.title}}</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="one-eight text-center">
+                                        <div class="display-tc">
+                                            <span id="pr" class="price_card">{{product.price}}$</span>
+                                        </div>
+                                    </div>
+                                    <div class="one-eight text-center">
+                                        <div class="display-tc">   
+                                            <a class="minus" href="#">-</a><input maxlength="2" name="text" readonly class="quantity form-control text-center" type="text" value="{{product.quantity}}"/><a data-id="{{product.id}}" class="plus" href="#">+</a>
+                                        </div>
+                                    </div>
+                                    <div class="one-eight text-center">
+                                        <div class="display-tc">
+                                            <span id="to" class="price_card">{{product.totalPrice}}$</span>
+                                        </div>
+                                    </div>
+                                    <div class="one-eight text-center">
+                                        <div class="display-tc">
+                                            <a href="index.php?c=page&act=idelete&id={{product.id}}" class="closed"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                <div class="col-md-3 col-md-push-1 text-center">
+                                    <div class="total">
+                                        <div class="grand-total">
+                                            <p><span><strong>Total : </strong></span><span class="total_cart"></span></p>
+                                            {% if session.login %}
+                                            <div class="order-total">
+                                                <a class="orderNow total_cart " href="#">Order</a>
+                                                <div class="modal-overlay">
+                                                    <div class="modal">
+
+                                                        <a class="close-modal">
+                                                            <svg viewBox="0 0 20 20">
+                                                            <path fill="#000000" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+                                                            </svg>
+                                                        </a><!-- close modal -->
+
+                                                        <div class="modal-content">
+                                                            <form class="form-4" action="" method="POST">
+                                                                    <p>
+                                                                        <input class ="order_button" type="button" name="submit" value="Order">
+                                                                    </p>      
+                                                                </form>
+                                                                <p><span><strong>Total : </strong></span><span class="total_cart">{{session.total}}</span></p>
+                                                        </div><!-- content -->
+
+                                                    </div><!-- modal -->
+                                                </div>
+                                            </div>
+                                            {% else %}
+                                            <div class="order-total">
+                                                <a class="orderNow total_cart" href="#"></a> OR <a class="order_room total_cart" href="index.php?c=page&act=login"></a>
+                                                <div class="modal-overlay">
+                                                    <div class="modal">
+
+                                                        <a class="close-modal">
+                                                            <svg viewBox="0 0 20 20">
+                                                            <path fill="#000000" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+                                                            </svg>
+                                                        </a><!-- close modal -->
+
+                                                        <div class="modal-content">
+                                                                <form class="form-4" action="" method="POST">           
+                                                                    <p>
+                                                                        <label for="Name">Name</label>
+                                                                        <input value="" type="text" name="name" placeholder="Name" required>
+                                                                    </p>
+                                                                    <p>
+                                                                        <label for="surname">Surname</label>
+                                                                        <input value="" type="text" name='surname' placeholder="Surname" required>
+                                                                    </p>
+                                                                        <p>
+                                                                        <label for="password">E-mail</label>
+                                                                        <input value="" type="email" name="e-mail" placeholder="e-mail" required>
+                                                                    </p>
+                                                                    <p>
+                                                                        <input class ="order_button" type="button" name="submit" value="Order">
+                                                                    </p>      
+                                                                </form>
+                                                                <p><span><strong>Total : </strong></span><span class="total_cart">{{session.total}}</span></p>
+                                                        </div><!-- content -->
+
+                                                    </div><!-- modal -->
+                                                </div>
+                                            </div>
+                                            {% endif %} 
+                                            {% else %}
+                                            <h1>Oh no!!! Add items Please!</h1>
+                                            <a href="index.php">Back for add something</a>
+
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
